@@ -1,38 +1,39 @@
 package my.edu.unikl.test;
 import my.edu.unikl.assignment1.*;
+
 public class SubjectTest {
 
 	public static void main(String[] args) {
 		//Create 2 object of subjects with the name of Database system 
 		//and Object-oriented programming
-		Subject subject1 = new Subject("Database system");
-		Subject subject2 = new Subject("Object-oriented programming");
+		Subject database = new Subject("Database system");
+		Subject oop = new Subject("Object-oriented programming");
 		
-		String student1 = new String("Ali Abu");
-		String student2 = new String("Atan Aton");
-		String student3 = new String("Lina Tan");
-		String student4 = new String("Gopal Raju");
-		String student5 = new String("Ying Tan");
- 
 		//Add 3 names, Ali Abu, Atan Aton and Lina Tan for the database system.
-		subject1.addStudent(student1);
-		subject1.addStudent(student2);
-		subject1.addStudent(student3);
+		String[] name = {"Ali Abu","Atan Aton","Lina Tan"};
+		database.addStudent(name);
 		
 		//Add 2 names, Gopal Raju and Ying Tan for the object-oriented programming
-		subject2.addStudent(student4);
-		subject2.addStudent(student5);
+		String[] name1 = {"Gopal Raju","Ying Tan"};
+		oop.addStudent(name1);
+
 		
 		//Print the student name and the number of students in each subject.
-		System.out.println("No. of Student in db:"+subject1.getStudentNum());
-        /*for (int i = 0; i < student.length; i++) //Loop for array output
-        {
-            student[i].displayArrayStudent(); //Call displayArrayStudent method to output
-        }*/
-		//System.out.println("Name of Student in db:"+subject1.getArrayStudent());
+		System.out.println("No. of Student in "+database.getSubjectName()+" : "+database.getStudentNum());
+		System.out.println("Student Name : ");
+		String[] temp = database.getArrayStudent();
+		for(int i =0;i<name.length;i++)
+		{
+			System.out.println(temp[i]);
+		}
 		
-		System.out.println("No. of Student in oop:"+subject2.getStudentNum());
-		//System.out.println("Name of Student in oop:"+subject1.getArrayStudent());
+		System.out.println("\nNo. of Student in "+oop.getSubjectName()+" : "+oop.getStudentNum());
+		System.out.println("Student Name : ");
+		String[] temp1 = oop.getArrayStudent();
+		for(int i =0;i<name1.length;i++)
+		{
+			System.out.println(temp1[i]);
+		}
 		
 
 	}

@@ -17,17 +17,11 @@ public class Subject {
 		this.subjectName = subjectName;
 	}
 	
-    public boolean addStudent(String student){
-        if(studentNum < 100){
-            for(int i = 0; i < studentNum; i++){
-                if(student.equals(arrayStudent[i]))
-                return false;
-            }
-            arrayStudent[studentNum] = student;
-            studentNum++;
-        return true;
-        }
-        return false;
+    public void addStudent(String[] arrayStudent){
+    	studentNum = arrayStudent.length;
+    	for(int i = 0;i<arrayStudent.length;i++){
+    		this.arrayStudent[i] = arrayStudent[i];
+    	}
     }
 	
 	public String getSubjectName()
@@ -44,9 +38,4 @@ public class Subject {
 	{
 		return studentNum;
 	}
-    public void displayArrayStudent() //Method to display sales id and amount in array
-    {
-        System.out.println("student name : "+ arrayStudent+"\n");
-    }
-
 }
