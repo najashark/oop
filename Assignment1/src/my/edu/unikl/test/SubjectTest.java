@@ -21,6 +21,8 @@ public class SubjectTest {
 		//Print the student name and the number of students in each subject.
 		System.out.println("No. of Student in "+database.getSubjectName()+" : "+database.getStudentNum());
 		System.out.println("Student Name : ");
+		
+		//array the method getStudent so it can store all the return from method getStudent
 		String[] temp = database.getArrayStudent();
 		for(int i =0;i<name.length;i++)
 		{

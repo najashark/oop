@@ -1,9 +1,9 @@
 package my.edu.unikl.assignment1;
 
 public class Subject {
-	private String subjectName;
+	private String subjectName = null;
 	private String[] arrayStudent = new String[100];
-	private int studentNum;
+	private int studentNum = 0;
 	
 	public Subject()
 	{
@@ -11,19 +11,19 @@ public class Subject {
 		arrayStudent = null;
 		studentNum = 0;
 	}
-	
+	//Constructor with 1-args
 	public Subject(String subjectName)
 	{
 		this.subjectName = subjectName;
 	}
-	
+	//Add student using looping for take array args
     public void addStudent(String[] arrayStudent){
     	studentNum = arrayStudent.length;
     	for(int i = 0;i<arrayStudent.length;i++){
     		this.arrayStudent[i] = arrayStudent[i];
     	}
     }
-	
+  //Accessor
 	public String getSubjectName()
 	{
 		return subjectName;

@@ -1,7 +1,7 @@
 package my.edu.unikl.test;
+import my.edu.unikl.assignment1.Sales;
 
 import java.util.*;
-import my.edu.unikl.assignment1.Sales;
 
 public class SalesTest //Test class
 {
@@ -41,4 +41,5 @@ public class SalesTest //Test class
         }
     }
 }
+
 
